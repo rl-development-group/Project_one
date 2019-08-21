@@ -73,9 +73,9 @@ class Graph:
         print (two_hop_neigh)
         return two_hop_neigh
     
-    def add_edge(self, graph, node_x, node_y):
+    def add_edge(self, node_x, node_y):
     
-        return graph.add_edge(node_x,node_y)
+        return self.g.add_edge(node_x,node_y)
     
     def two_level_ego_network(self, node):
         return nx.generators.ego.ego_graph(self.g, node, 2)
